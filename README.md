@@ -1,6 +1,9 @@
 # Smart_Amplifier
 The 5.1 AVReceivers key controls, like volume control and input selections can be done over the internet with blynk IOT platform
 
+# Blynk App interface
+![Blynk_App_Interface_1](https://github.com/user-attachments/assets/7a013f4b-5967-4ee8-82be-9ef82633f48e)
+
 # Key codes 
 Below I have mentined the key codes and protocol details which have been used 
 * Protocol  : NEC
@@ -18,7 +21,7 @@ Below I have mentined the key codes and protocol details which have been used
 * Surround minus = 0x10EF807F 
 * Sub plus = 0x10EFD02F 
 * Sub minus = 0x10EFE01F 
-* RESET = 0x10EF1AE5 
+* RESET = 0x10EF1AE5
 * UP = 0x10EF926D 
 * DOWN = 0x10EFB04F 
 * LEFT = 0x10EF728D 
@@ -34,3 +37,4 @@ Below I have mentined the key codes and protocol details which have been used
 * TEST = 0x10EF30CF 
 * AUX = 0x10EF22DD 
 * POWER = 0x10EF827D
+
