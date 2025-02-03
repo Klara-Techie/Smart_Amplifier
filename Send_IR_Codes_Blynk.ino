@@ -151,14 +151,6 @@ BLYNK_WRITE(V16_LIGHT) {
   Blynk.virtualWrite(V16_LIGHT, state);
 }
 
-// BLYNK_WRITE(V2_RESET) {
-//   if(param.asInt()) {
-//     irsend.sendNEC(RESET_CODE, 32);
-//     Serial.println("Reset Triggered [V13]");
-//     Serial.println("Sent IR Code: 0x" + String(RESET_CODE, HEX));
-//   }
-// }
-
 // Push Button Handlers with Debug
 BLYNK_WRITE(V2_MASTER_PLUS) {
   if(param.asInt() == 1) {
@@ -329,21 +321,11 @@ BLYNK_WRITE(V1_OK) {
     mode == 13 ? "0x" + String(INFO, HEX) :
     mode == 15 ? "0x" + String(POWER, HEX) :
     ""  // If mode doesn't match, return empty string
-);
-
-if (codeToPrint != "") {
-  Serial.println("Sent IR Code: " + codeToPrint);
-}
-
-  // Serial.println("Sent IR Code: 0x" + String(
-  //   mode == 1 ? OK_CODE :
-  //   mode == 3 ? AUX :
-  //   mode == 5 ? AMODE :
-  //   mode == 7 ? TONE :
-  //   mode == 11 ? MODE :
-  //   mode == 13 ? INFO :
-  //   mode == 15 ? INFO : , HEX));
+  );
   
+  if (codeToPrint != "") {
+    Serial.println("Sent IR Code: " + codeToPrint);
+  }
 }
 
 void loop() {
